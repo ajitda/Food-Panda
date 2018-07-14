@@ -8,7 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
