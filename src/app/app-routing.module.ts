@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
@@ -20,14 +20,6 @@ const appRoutes:Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
-  exports:[RouterModule],
-  declarations: [
-    AppComponent
-  ],
-  
-bootstrap: [AppComponent]
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }
-export class AppModule {
-
-}
