@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+
+declare var $: any;
 
 @Component({
   selector: 'app-add',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  public file_src : string = "../assets/images/avatar.jpeg";
+
+  constructor() {
+    //private router:Router;
+   }
 
   ngOnInit() {
   }
