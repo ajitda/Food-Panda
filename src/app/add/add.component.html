@@ -26,11 +26,21 @@
                   <div class="col-md-7">
                     <div class="form-group">
                       <label for="name">Full Name</label>
-                      <input type="text" name="name" id="name" class="form-control"/>
+                      <input type="text" name="fullname" id="name" class="form-control" [(ngModel)]="model.fullname" #fullname="ngModel"/>
+                      <div *ngIf="fullname.errors && (fullname.dirty || fullname.touched)" class="alert alert-danger">
+                        <div [hidden]="!fullname.errors.required">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;Fullname is required
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
                       <label for="age">Age</label>
-                      <input type="number" name="age" id="age" class="form-control" min="1" max="45">
+                      <input type="number" name="age" id="age" class="form-control" min="1" max="45" [(ngModel)]="model.age" #age="ngModel">
+                      <div *ngIf="age.errors && (age.dirty || age.touched)" class="alert alert-danger">
+                          <div [hidden]="!age.errors.required">
+                              <span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;Age is required
+                          </div>
+                        </div>
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-success">Submit</button>
