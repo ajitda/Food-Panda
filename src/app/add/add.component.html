@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-8">
               
-                <form action="" class="form-horizontal">
+                <form action="" class="form-horizontal" #addProfileForm="ngForm">
                   
                   <div class="col-md-7">
                     <div class="form-group">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                      <button type="submit" class="btn btn-success">Submit</button>
+                      <button type="submit" class="btn btn-success" [disabled]="!addProfileForm.form.valid">Submit</button>
                       <a href="#" class="btn btn-inf">Cancel</a>
                     </div>
                   </div>
